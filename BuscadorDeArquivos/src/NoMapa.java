@@ -2,7 +2,7 @@ public class NoMapa<T> {
     private int chave;
     private T valor;
 
-    public int getChave() {
+    public boolean getChave() {
         return chave;
     }
 
@@ -46,5 +46,10 @@ public class NoMapa<T> {
 
         return true;
     }
+
+    public NoMapa<T> getProximo() {
+        return null;
+    }
+
 }
 

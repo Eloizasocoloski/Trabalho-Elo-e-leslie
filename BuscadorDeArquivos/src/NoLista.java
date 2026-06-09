@@ -1,4 +1,4 @@
-public class NoLista<T> implements java.io.Serializable {
+public class NoLista <T> implements java.io.Serializable {
 
     private T info;
     private NoLista<T> proximo;

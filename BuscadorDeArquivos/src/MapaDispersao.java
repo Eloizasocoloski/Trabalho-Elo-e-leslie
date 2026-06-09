@@ -24,7 +24,7 @@ public class MapaDispersao<T> implements java.io.Serializable {
 
         NoMapa<T> atual = lista.getPrimeiro();
         while (atual != null) {
-            if (atual.getChave().equals(chave)) {
+            if (atual.getChave()) {
                 atual.setValor(valor);
                 return;
             }

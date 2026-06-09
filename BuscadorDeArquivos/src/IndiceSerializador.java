@@ -1,11 +1,11 @@
 import java.io.*;
-import java.util.HashMap;
+
 
 public class IndiceSerializador {
 
     private static final String ARQUIVO = "indice.dat";
 
-    public static void salvar(HashMap mapa) {
+    public static void salvar(MapaDispersao mapa) {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(ARQUIVO))) {
             out.writeObject(mapa);
         } catch (IOException e) {
@@ -13,9 +13,9 @@ public class IndiceSerializador {
         }
     }
 
-    public static HashMap carregar() {
+    public static MapaDispersao carregar() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(ARQUIVO))) {
-            return (HashMap) in.readObject();
+            return (MapaDispersao) in.readObject();
         } catch (Exception e) {
             return null;
         }
